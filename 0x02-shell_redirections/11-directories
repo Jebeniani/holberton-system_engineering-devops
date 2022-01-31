@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -print| wc -la
+ls -la | grep -v total | wc -l

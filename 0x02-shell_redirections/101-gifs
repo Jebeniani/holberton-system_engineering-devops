@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -type f -name "*.git" -empty
+ls -1lap | sort -k 1.1f,1.1 . | grep -v

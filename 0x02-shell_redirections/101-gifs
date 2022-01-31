@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1lap | sort -k 1.1f,1.1 . | grep -v
+grep -v ls -1lap | sort -k 1.1f,1.1 . 

@@ -1,4 +1,4 @@
-## Regular expression
+# Regular expression
 
 here is the Ruby code that I will use in this project
 
@@ -24,4 +24,4 @@ Some people, when confronted with a problem, think
 “I know, I'll use regular expressions.”   Now they have two problems.
 ```
 
-# Made by Jebeniani Aymen @C17
+## Made by Jebeniani Aymen @C17

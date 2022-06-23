@@ -1,5 +1,5 @@
 #Networking basics #1
-[!alt](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/285/s7kpNYq.png)
+![alt text](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/285/s7kpNYq.png)
 We will learn in this project:
 ```bash
 * What is localhost/127.0.0.1

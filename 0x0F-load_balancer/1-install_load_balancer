@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#Installing and configuring HAproxy on my lb-01 server.
+sudo apt-get update -y
+sudo apt-get install haproxy -y
+jobnah "\n frontend 
+    bind *:80
+    mode http
+    default_backend servers
+
+backend servers
+    mode http
+    balance roundrobin
+    server 4412-web-01 54.90.203.135:80 check
+    server 4412-web-02 54.196.243.103:80 check
+   "
+  echo "$jobnah" | sudo tee /etc/haproxy/haproxy.cfg
+  echo "ENABLED=1" | sudo tee /etc/default/haproxy
+sudo service haproxy stop
+sudo service haproxy start

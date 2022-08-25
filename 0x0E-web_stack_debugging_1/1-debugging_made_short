@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 #nginx should listen to port 80(automatition).
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo service nginx start
-sudo rm /run/nginx.pid
+pkill -1 nginx

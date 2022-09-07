@@ -61,7 +61,7 @@ log_error = /var/log/mysql/error.log
 # The following can be used as easy to replay backup logs or for replication.
 # note: if you are setting up a replication slave, see README.Debian about
 #       other settings you may need to change.
-server-id               = 2
+server-id               = 1
 relay-log               = /var/log/mysql/mysql-relay-bin.lo
 log_bin                 = /var/log/mysql/mysql-bin.log
 # binlog_expire_logs_seconds    = 2592000

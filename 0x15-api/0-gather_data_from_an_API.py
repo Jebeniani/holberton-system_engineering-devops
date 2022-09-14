@@ -16,7 +16,7 @@ if __name__ == "__main__":
     user = requests.get("{}/users/{}".format(holder, employeeID)).json()
     todo = requests.get(
         "{}/users/{}/todos".format(holder, employeeID)).json()
-    EmployeeName = user.get('name')
+    employeeName = user.get('name')
     completed = 0
     total = 0
     for element in todo:
@@ -27,8 +27,8 @@ if __name__ == "__main__":
             total += 1
 
     print("Employee {} is done with tasks({}/{}):".format(
-        EmployeeName, completed, total))
+        employeeName, completed, total))
 
-    for item in todo:
-        if item.get('completed') is True:
-            print("\t {}".format(item.get('title')))
+    for done in todo:
+        if done.get('completed') is True:
+            print("\t {}".format(done.get('title')))

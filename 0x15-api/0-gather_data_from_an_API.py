@@ -14,12 +14,12 @@ if __name__ == "__main__":
     employeeID = int(argv[1])
     holder = "https://jsonplaceholder.typicode.com"
     user = requests.get("{}/users/{}".format(holder, employeeID)).json()
-    tada = requests.get(
+    todo = requests.get(
         "{}/users/{}/todos".format(holder, employeeID)).json()
     EmployeeName = user.get('name')
     completed = 0
     total = 0
-    for element in tada:
+    for element in todo:
         if element.get('completed') is True:
             total += 1
             completed += 1
@@ -29,6 +29,6 @@ if __name__ == "__main__":
     print("Employee {} is done with tasks({}/{}):".format(
         EmployeeName, completed, total))
 
-    for item in tada:
+    for item in todo:
         if item.get('completed') is True:
             print("\t {}".format(item.get('title')))

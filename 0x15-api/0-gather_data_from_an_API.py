@@ -27,9 +27,9 @@ if __name__ == "__main__":
         else:
             total += 1
 
-    print("Employee {:} is done with tasks({:}/{:}):".format(
+    print("Employee {} is done with tasks({}/{}):".format(
         EmployeeName, completed, total))
 
     for item in tada:
         if item.get('completed') is True:
-            print("\t {:}".format(item.get('title')))
+            print("\t {}".format(item.get('title')))

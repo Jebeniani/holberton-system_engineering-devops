@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""Gather data from an API and Export to CSV """
+"""Gather data from an API and Export to JSON"""
 from json import dumps
-import csv
 import requests
 from sys import argv
 
@@ -26,6 +25,6 @@ if __name__ == "__main__":
         }
         tasks.append(dict)
 
-    tasks_dict = {employeeID: tasks}
+    tasksDict = {employeeID: tasks}
     with open("{}.json".format(employeeID), "w") as f:
-        f.write(dumps(tasks))
+        f.write(dumps(tasksDict))

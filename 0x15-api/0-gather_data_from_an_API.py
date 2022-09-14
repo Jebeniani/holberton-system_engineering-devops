@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Gather data from an API"""
+"""Gather data from an API """
 import requests
 from sys import argv
 
@@ -17,16 +17,16 @@ if __name__ == "__main__":
     employeeName = user.get('name')
     completed = 0
     total = 0
-    for elem in todo:
-        if elem.get('completed') is True:
+    for element in todo:
+        if element.get('completed') is True:
             total += 1
             completed += 1
         else:
             total += 1
 
-    print("Employee {} is done with tasks({}/{}):".format(employeeName,
-                                                          completed,
-                                                          total))
-    for done in todo:
-        if done.get('completed') is True:
-            print("\t {}".format(done.get('title')))
+    print("Employee {} is done with tasks({}/{}):".format(
+        employeeName, completed, total))
+
+    for item in todo:
+        if item.get('completed') is True:
+            print("\t {}".format(item.get('title')))

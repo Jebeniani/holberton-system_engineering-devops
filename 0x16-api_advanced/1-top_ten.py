@@ -5,12 +5,13 @@ import requests
 
 def top_ten(subreddit):
     """the top ten hot posts"""
-    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    headers = {"User-Agent": "Mozilla/5.0"}
-    r = requests.get(url, headers=headers, allow_redirects=False)
-    if r.status_code == 200:
-        subs = r.json().get('data').get('children')
-        for subscriber in range(10):
-            print(subs[subscriber].get('data').get('title'))
+    url = requests.get("https://www.reddit.com/r/{}/hot.json"
+                       .format(subreddit),
+                       headers={"User-Agent": "Mozilla/5.0"},
+                       params={"limit": "10"})
+    if url.status_code == 200:
+        for element in url.json().get('data').get('children'):
+            if element.get('data').get('title'):
+                print(element.get('data').get('title'))
     else:
         print("None")
